@@ -1,0 +1,459 @@
+@import "tailwindcss";
+
+/* =================================================================
+   RADAR — Apresentação de anteprojeto
+   Tokens herdados do design system do Radar OS (index.css).
+   Páginas principais alternam papel (#F2F5EC) e branco (#FFFFFF);
+   verde (#143D28) e vermelho (#5C1518) aparecem como divisórias.
+   ================================================================= */
+
+@theme {
+  --color-bg: #F6F2E8;
+  --color-white: #FFFCF5;
+  --color-surface: #EBE8DC;
+  --color-border: #B9B9AA;
+  --color-line: #53655A;
+  --color-ink: #16392B;
+  --color-ink-muted: #526458;
+
+  --color-paper: #F6F2E8;
+  --color-graphite: #16392B;
+
+  --color-ifverde: #2F9E41;
+  --color-verde-texto: #247C37;
+  --color-ifvermelho: #CD191E;
+  --color-iflima: #81C341;
+  --color-ifteal: #3BB9B4;
+
+  --color-ocher: #D4A017;
+  --color-sage: var(--color-ifverde);
+  --color-clay: var(--color-ifvermelho);
+
+  --color-verde: #123D2B;
+  --color-verde-muted: #BDD4C1;
+  --color-vermelho: #681E25;
+  --color-vermelho-muted: #E0C1BE;
+  --color-destaque-lima: #D0EA8B;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  /* Ficha técnica: superfície elevada dos painéis de dados */
+  --shadow-panel: 0 7px 20px rgb(22 57 43 / 0.05);
+}
+
+:root {
+  --stage-w: 1920px;
+  --stage-h: 1080px;
+  --slide-transition: 680ms;
+  --slide-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Reveal como camada de transição ──────────────────────────── */
+.reveal {
+  font-family: var(--font-body);
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  transition: background-color 0.4s ease;
+}
+
+.reveal .slides,
+.reveal .slides section,
+.reveal .slides section > * {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* ── Tons de página (paper, white, green, red) ────────────────── */
+.reveal .slides section.slide-paper {
+  --slide-bg: var(--color-bg);
+  --slide-ink: var(--color-ink);
+  --slide-muted: var(--color-ink-muted);
+  --slide-accent: var(--color-verde-texto);
+  --slide-line: #A7B3A5;
+  color: var(--color-ink);
+  background: transparent;
+}
+
+.reveal .slides section.slide-white {
+  --slide-bg: var(--color-white);
+  --slide-ink: var(--color-ink);
+  --slide-muted: var(--color-ink-muted);
+  --slide-accent: var(--color-verde-texto);
+  --slide-line: #B9B9AA;
+  color: var(--color-ink);
+  background: transparent;
+}
+
+.reveal .slides section.slide-green {
+  --slide-bg: var(--color-verde);
+  --slide-ink: var(--color-bg);
+  --slide-muted: var(--color-verde-muted);
+  --slide-accent: var(--color-destaque-lima);
+  --slide-line: rgb(246 242 232 / 0.38);
+  color: var(--color-bg);
+  background: transparent;
+}
+
+/* Capa: mesma base creme/verde dos slides de conteúdo. O fundo direto
+   mantém o contraste mesmo quando o Reveal atualiza os backgrounds via HMR. */
+.reveal .slides section#capa {
+  --slide-bg: var(--color-bg);
+  --slide-ink: var(--color-ink);
+  --slide-muted: var(--color-ink-muted);
+  --slide-accent: var(--color-verde-texto);
+  --slide-line: #A7B3A5;
+  color: var(--slide-ink);
+  background: var(--slide-bg);
+}
+
+.reveal .slides section.slide-red {
+  --slide-bg: var(--color-vermelho);
+  --slide-ink: var(--color-bg);
+  --slide-muted: var(--color-vermelho-muted);
+  --slide-accent: var(--color-destaque-lima);
+  --slide-line: rgb(246 242 232 / 0.38);
+  color: var(--color-bg);
+  background: transparent;
+}
+
+/* Fundo fora da área 16:9 sincronizado com o tom ativo */
+.reveal:has(.slides .present.slide-paper) {
+  background: var(--color-bg);
+}
+
+/* Reveal pode conservar a cor antiga do background após hot reload.
+   A capa deve preencher também as laterais fora do palco 16:9. */
+.reveal:has(.slides #capa.present) .backgrounds .slide-background.present {
+  background-color: var(--color-bg) !important;
+}
+
+.reveal:has(.slides .present.slide-white) {
+  background: var(--color-white);
+}
+
+.reveal:has(.slides .present.slide-green) {
+  background: var(--color-verde);
+}
+
+.reveal:has(.slides .present.slide-red) {
+  background: var(--color-vermelho);
+}
+
+/* Inversão do logo do IFES para branco puro nos slides escuros (green e red) */
+.reveal:has(.slides .present.slide-green) + * .ifes-logo-progress,
+.reveal:has(.slides .present.slide-red) + * .ifes-logo-progress,
+body:has(.reveal .slides .present.slide-green) .ifes-logo-progress,
+body:has(.reveal .slides .present.slide-red) .ifes-logo-progress {
+  filter: brightness(0) invert(1);
+}
+
+.deck-nav {
+  color: var(--color-verde);
+}
+
+.deck-nav-separator {
+  color: var(--color-ifverde);
+}
+
+.deck-nav-button {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.deck-nav-button:hover:not(:disabled) {
+  background: rgb(47 158 65 / 0.12);
+  color: var(--color-ifverde);
+}
+
+.deck-nav-button:focus-visible {
+  outline: 2px solid var(--color-ifverde);
+  outline-offset: 2px;
+}
+
+.deck-nav-button:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.deck-progress-fill {
+  background: var(--color-ifverde);
+}
+
+body:has(.reveal .slides .present.slide-green) .deck-nav,
+body:has(.reveal .slides .present.slide-red) .deck-nav {
+  color: var(--color-white);
+}
+
+body:has(.reveal .slides .present.slide-green) .deck-nav-separator,
+body:has(.reveal .slides .present.slide-red) .deck-nav-separator {
+  color: var(--color-destaque-lima);
+}
+
+body:has(.reveal .slides .present.slide-green) .deck-progress-fill,
+body:has(.reveal .slides .present.slide-red) .deck-progress-fill {
+  background: var(--color-destaque-lima);
+}
+
+/* ── Transição Fluida entre Slides ───────────────────────────── */
+.reveal.slide:not(.overview) .slides > section {
+  transition: transform var(--slide-transition) var(--slide-ease) !important;
+  will-change: transform;
+}
+
+/* Reveal posiciona as miniaturas da visão geral via transform inline. */
+.reveal.overview .slides > section {
+  transition: none !important;
+}
+
+/* ── Tipografia do palco ──────────────────────────────────────── */
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.stage-pad {
+  padding: 92px 116px 96px;
+}
+
+.editorial-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-verde);
+  color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.title-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+}
+
+.title-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.lead {
+  font-size: 27px;
+  line-height: 1.42;
+  letter-spacing: -0.005em;
+}
+
+.body-sm {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.rule {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+}
+
+/* Superfície dos cards e faixa institucional de destaque. */
+.panel {
+  --panel-accent: var(--accent, var(--color-ifverde));
+  position: relative;
+  border-radius: var(--radius-xl);
+  border: 1px solid color-mix(in oklab, var(--panel-accent) 26%, var(--color-border));
+  background: linear-gradient(
+    165deg,
+    color-mix(in oklab, var(--panel-accent) 19%, var(--color-white)),
+    color-mix(in oklab, var(--panel-accent) 6%, var(--color-white)) 67%
+  );
+  box-shadow: var(--shadow-panel);
+}
+
+.panel-line {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background: var(--panel-accent);
+  pointer-events: none;
+}
+
+.panel-text-accent {
+  color: color-mix(in oklab, var(--accent, var(--color-ifverde)) 48%, #202620);
+}
+
+/* Superfície interna (KPIs, blocos dentro de um painel maior) */
+.panel-surface {
+  background: color-mix(in oklab, var(--accent, var(--color-ifverde)) 13%, var(--color-white));
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.03);
+}
+
+/* ── Pílula técnica (tags, badges de severidade) ─────────────── */
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 4px 10px 4px 9px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--pill-accent, var(--accent, var(--color-border))) 32%, transparent);
+  background: color-mix(in oklab, var(--pill-accent, var(--accent, var(--color-border))) 7%, var(--slide-bg, var(--color-bg)));
+  color: color-mix(in oklab, var(--pill-accent, var(--accent, var(--color-ink))) 55%, var(--color-ink));
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tech-pill--muted {
+  --pill-accent: var(--color-line);
+  color: var(--color-ink-muted);
+  background: color-mix(in oklab, var(--color-line) 5%, var(--slide-bg, var(--color-bg)));
+}
+
+.tech-dot {
+  position: relative;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--pill-accent, var(--accent, var(--color-border)));
+}
+
+.tech-dot--live::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  animation: tech-ping 2.8s var(--ease-out) infinite;
+}
+
+@keyframes tech-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* ── Barra calibrada (peso dos motivos) ──────────────────────── */
+.tech-bar {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--color-line) 10%, transparent);
+}
+
+.tech-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 calc(12.5% - 1px),
+    var(--slide-bg, var(--color-bg)) calc(12.5% - 1px) 12.5%
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.tech-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 70%, transparent), var(--accent));
+}
+
+/* Texto secundário em cada tom */
+.muted,
+.reveal .slides section .muted {
+  color: var(--slide-muted, var(--color-ink-muted));
+}
+
+/* ── Faixa institucional (verde, lima, vermelho e preto da marca IF) ── */
+.stage > .ifes-band {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 7px;
+  background: linear-gradient(
+    90deg,
+    var(--color-ifverde) 0 38%,
+    var(--color-iflima) 38% 48%,
+    var(--color-ifvermelho) 48% 84%,
+    var(--color-ink) 84% 100%
+  );
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
