@@ -3,17 +3,13 @@ import { ResearchIcon } from './ResearchIcon'
 
 const STEPS = [
   { key: 'coleta', label: 'Coleta', detail: 'fonte pública' },
-  { key: 'tratamento', label: 'Tratamento', detail: 'limpeza e padronização' },
-  { key: 'atributos', label: 'Atributos', detail: 'multissinal' },
-  { key: 'deteccao', label: 'Detecção', detail: 'Isolation Forest' },
-  { key: 'contexto', label: 'Contexto', detail: 'registros relacionados' },
-  { key: 'exploracao', label: 'Exploração', detail: 'dashboard' },
+  { key: 'tratamento', label: 'Tratamento', detail: 'duplicidades, ausências e identificadores pessoais' },
+  { key: 'atributos', label: 'Atributos', detail: 'valor, frequência e favorecido' },
+  { key: 'deteccao', label: 'Detecção e prioridade', detail: 'Isolation Forest e valor da despesa' },
+  { key: 'contexto', label: 'Explicação', detail: 'regras baseadas nos dados' },
+  { key: 'exploracao', label: 'Painel', detail: 'ranking, filtros e fichas' },
 ] as const
 
-/**
- * Pipeline de 6 etapas em fluxo horizontal, inspirado no item
- * "Coleta → Tratamento → Construção de atributos → Detecção → Contextualização → Exploração".
- */
 export default function PipelineFlow() {
   return (
     <div className="grid w-full grid-cols-6 gap-4" data-flow>

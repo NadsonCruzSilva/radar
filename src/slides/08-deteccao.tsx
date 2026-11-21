@@ -30,14 +30,14 @@ export function SlideDetection() {
         index="08"
         section="detecção"
         title="Detecção com Isolation Forest"
-        lead="O modelo usa poucos cortes para isolar registros atípicos. A prioridade de inspeção combina a pontuação de anomalia com o impacto financeiro."
+        lead="O Isolation Forest separa registros com partições aleatórias. Registros que costumam ser isolados com menos cortes recebem escores mais altos de atipicidade."
       />
 
       <div className="mt-8 flex flex-1 items-center">
         <ForestDiagram />
       </div>
 
-      <Footnote source="Liu, Ting e Zhou (2008)">Figura 3. Exemplo de isolamento em árvores.</Footnote>
+      <Footnote source="Liu, Ting e Zhou (2008) e Metodologia do anteprojeto">Figura 3. Exemplo de isolamento em árvores.</Footnote>
     </Slide>
   )
 }

@@ -10,7 +10,7 @@ export function SlidePart2() {
         index="2"
         kicker="como funciona"
         title="Método proposto"
-        note="Coleta, tratamento, atributos, detecção, contextualização e exploração — cada uma com escopo delimitado e reprodutível."
+        note="A pesquisa segue a Design Science Research para desenvolver, demonstrar e avaliar o protótipo."
       />
     </Slide>
   )

@@ -10,7 +10,6 @@ export function SlideExplanation() {
     tl.from(root.querySelector('[data-anim]'), { opacity: 0, x: 40, duration: 0.7 })
       .from(root.querySelectorAll('[data-field]'), { opacity: 0, y: 12, duration: 0.45, stagger: 0.1 }, '-=0.3')
       .from(root.querySelectorAll('[data-reason]'), { opacity: 0, x: 18, duration: 0.45, stagger: 0.14 }, '-=0.2')
-      .from(root.querySelectorAll('[data-bar]'), { scaleX: 0, transformOrigin: 'left', duration: 0.6, stagger: 0.12 }, '-=0.5')
     return tl
   }, [])
 
@@ -25,20 +24,20 @@ export function SlideExplanation() {
             index="09"
             section="explicação do alerta"
             title="Explicação do alerta"
-            lead="Cada ficha declara os fatores que elevaram o registro e reúne o que for necessário para checar a evidência na fonte."
+            lead="Cada ficha descreve os atributos que ajudam a interpretar o alerta e indica o que conferir na base de origem."
           />
 
           <ul className="mt-14 space-y-5">
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">severidade e tipologia</p>
+              <p className="title-lg text-[22px]">redação opcional</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                baixa, média ou alta, com a natureza do desvio.
+                Um modelo de linguagem poderá ser testado para redigir o texto com base nas evidências fornecidas.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">resumo determinístico</p>
+              <p className="title-lg text-[22px]">explicação por regras</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                texto gerado por regras a partir dos valores do registro.
+                As regras geram uma explicação em português a partir dos atributos do registro.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
@@ -55,7 +54,7 @@ export function SlideExplanation() {
         </div>
       </div>
 
-      <Footnote source="Anteprojeto, camada de explicação">Figura 4. Ficha ilustrativa de um alerta.</Footnote>
+      <Footnote source="Anteprojeto, seção Detecção, prioridade e explicação">Figura 4. Ficha ilustrativa de um alerta, com dados fictícios.</Footnote>
     </Slide>
   )
 }

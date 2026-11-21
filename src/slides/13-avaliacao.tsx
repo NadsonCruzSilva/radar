@@ -22,14 +22,14 @@ export function SlideEvaluation() {
         index="13"
         section="avaliação"
         title="Protocolo de avaliação"
-        lead="A amostra reúne 30 alertas do topo do ranking e 10 registros de controle sorteados fora dele. Cada um é conferido manualmente e registrado em diário de coleta."
+        lead="O estudo de caso documental examinará 40 registros de um mesmo exercício: os 30 primeiros do ranking e 10 sorteados fora desse grupo."
       />
 
       <div className="mt-8 flex flex-1 items-start">
         <EvaluationGrid />
       </div>
 
-      <Footnote source="Protocolo do anteprojeto. Referencial metodológico em Hevner et al. (2004) e Peffers et al. (2007)">Figura 7. Composição da amostra e critérios de análise.</Footnote>
+      <Footnote source="Anteprojeto, seção Avaliação">Figura 7. Composição da amostra e critérios de análise.</Footnote>
     </Slide>
   )
 }

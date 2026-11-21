@@ -6,10 +6,9 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 import { ResearchIcon } from '@/visuals/ResearchIcon'
 
 const SIGNALS = [
-  { icon: 'valor' as const, label: 'valor acima do comparável', detail: 'muito maior que a mediana da categoria' },
-  { icon: 'concentracao' as const, label: 'concentração no favorecido', detail: 'muitas despesas para poucos recebedores' },
-  { icon: 'repeticao' as const, label: 'repetição em curto intervalo', detail: 'valores semelhantes em poucos dias' },
-  { icon: 'historico' as const, label: 'comportamento incomum no histórico', detail: 'desvio em relação à própria categoria' },
+  { icon: 'coleta' as const, label: 'Dados abertos', detail: 'Os portais de transparência disponibilizam registros de execução orçamentária.' },
+  { icon: 'historico' as const, label: 'Triagem manual', detail: 'O volume de registros dificulta a análise individual.' },
+  { icon: 'valor' as const, label: 'Análise por categoria', detail: 'Totais agregados podem ocultar desvios em categorias específicas.' },
 ]
 
 export function SlideProblem() {
@@ -34,16 +33,14 @@ export function SlideProblem() {
         index="03"
         section="problema de pesquisa"
         title="Pergunta de pesquisa"
-        lead="Em grandes bases de execução orçamentária, um registro atípico pode resultar de valor muito superior ao comparável, concentração em um favorecido, repetição de valores ou comportamento incomum no histórico."
       />
 
       <div className="mt-14 grid flex-1 grid-cols-[1.35fr_1fr] gap-20">
         <div className="flex flex-col">
           <div className="relative border-l-4 border-[var(--color-ifverde)] pl-8" data-quote>
             <p className="title-lg text-[40px] leading-[1.2]">
-              Como um Sistema de Informação pode combinar características financeiras,
-              temporais e relacionais para identificar, priorizar e explicar padrões
-              atípicos, apresentando evidências que auxiliem a análise humana?
+              Como identificar, priorizar e explicar despesas públicas atípicas a partir de dados abertos,
+              de modo que cidadãos e analistas possam conferir as evidências de cada alerta?
             </p>
             <span className="mono-label mt-6 block text-[var(--color-ink-muted)]">
               questão de pesquisa
@@ -64,7 +61,7 @@ export function SlideProblem() {
         </ul>
       </div>
 
-      <Footnote source="Anteprojeto, seções 3 e 5" />
+      <Footnote source="Anteprojeto, Introdução. Lei de Acesso à Informação (2011) e Dutra et al. (2026)." />
     </Slide>
   )
 }

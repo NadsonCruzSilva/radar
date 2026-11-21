@@ -3,43 +3,39 @@ import gsap from 'gsap'
 import { Slide } from '@/deck/Slide'
 import { SlideHeader, Footnote } from '@/deck/chrome'
 
-const IS = [
-  'coletar e tratar dados públicos de despesas',
-  'construir atributos financeiros, temporais e relacionais',
-  'identificar e priorizar registros estatisticamente atípicos',
-  'explicar por que cada alerta foi gerado',
-  'navegar por registros relacionados ao mesmo contexto',
-  'oferecer um dashboard para exploração dos alertas',
+const SCOPE = [
+  'Um exercício financeiro encerrado',
+  'Uma unidade gestora estadual ou federal',
+  'Despesas públicas disponíveis em dados abertos',
 ]
 
-const IS_NOT = [
-  'determinar se a despesa é ilegal ou fraudulenta',
-  'emitir conclusões jurídicas ou de auditoria',
-  'realizar fiscalização automatizada',
-  'substituir profissionais de controle',
-  'ser um sistema completo de auditoria governamental',
+const OBJECTIVES = [
+  'Preparar os dados e calcular atributos de valor, frequência e favorecido',
+  'Detectar despesas atípicas e ordenar os alertas por prioridade',
+  'Exibir alertas e evidências verificáveis em um painel interativo',
+  'Avaliar os alertas e as explicações em um estudo de caso documental',
 ]
 
 export function SlideScope() {
   const build = useCallback((root: HTMLElement) => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-    tl.from(root.querySelector('[data-col-is]'), {
+    tl.from(root.querySelector('[data-col-scope]'), {
       opacity: 0,
       x: -24,
       duration: 0.6,
     })
       .from(
-        root.querySelectorAll('[data-item-is]'),
+        root.querySelectorAll('[data-item-scope]'),
         { opacity: 0, x: -16, duration: 0.35, stagger: 0.07 },
         '-=0.3',
       )
       .from(
-        root.querySelector('[data-col-isnot]'),
+        root.querySelector('[data-col-objectives]'),
         { opacity: 0, x: 24, duration: 0.6 },
         '-=0.4',
       )
       .from(
-        root.querySelectorAll('[data-item-isnot]'),
+        root.querySelectorAll('[data-item-objective]'),
         { opacity: 0, x: 16, duration: 0.35, stagger: 0.07 },
         '-=0.3',
       )
@@ -54,20 +50,20 @@ export function SlideScope() {
       <SlideHeader
         index="04"
         section="delimitação"
-        title="Escopo do Radar"
+        title="Objetivos e recorte"
       />
 
       <div className="mt-12 grid flex-1 grid-cols-2 gap-6">
         <div
           className="panel flex flex-col px-10 py-8"
-          data-col-is
+          data-col-scope
           style={{ '--accent': 'var(--color-ifverde)' } as CSSProperties}
         >
           <span className="panel-line" aria-hidden="true" />
-          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>No escopo</h3>
+          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Recorte da pesquisa</h3>
           <ul className="mt-8 space-y-4">
-            {IS.map((item) => (
-              <li key={item} className="flex items-baseline gap-4 border-t border-[var(--color-border)]/60 pt-4" data-item-is>
+            {SCOPE.map((item) => (
+              <li key={item} className="flex items-baseline gap-4 border-t border-[var(--color-border)]/60 pt-4" data-item-scope>
                 <span className="mono-label text-[12px] text-[var(--color-ifverde)] font-bold">+</span>
                 <span className="body-sm">{item}</span>
               </li>
@@ -77,14 +73,14 @@ export function SlideScope() {
 
         <div
           className="panel flex flex-col px-10 py-8"
-          data-col-isnot
+          data-col-objectives
           style={{ '--accent': 'var(--color-ifvermelho)' } as CSSProperties}
         >
           <span className="panel-line" aria-hidden="true" />
-          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Fora do escopo</h3>
+          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Objetivos específicos</h3>
           <ul className="mt-8 space-y-4">
-            {IS_NOT.map((item) => (
-              <li key={item} className="flex items-baseline gap-4 border-t border-[var(--color-border)]/60 pt-4" data-item-isnot>
+            {OBJECTIVES.map((item) => (
+              <li key={item} className="flex items-baseline gap-4 border-t border-[var(--color-border)]/60 pt-4" data-item-objective>
                 <span className="mono-label text-[12px] text-[var(--color-ifvermelho)] font-bold">—</span>
                 <span className="body-sm text-[var(--color-ink-muted)]">{item}</span>
               </li>
@@ -93,7 +89,7 @@ export function SlideScope() {
         </div>
       </div>
 
-      <Footnote source="Anteprojeto, seção 2" />
+      <Footnote source="Anteprojeto, Introdução e Objetivos" />
     </Slide>
   )
 }

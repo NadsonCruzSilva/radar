@@ -10,7 +10,7 @@ export function SlidePart3() {
         index="3"
         kicker="como avaliar"
         title="Avaliação e viabilidade"
-        note="O estudo de caso verifica se as fichas são verificáveis, fiéis aos dados, acionáveis e livres de ruído evitável."
+        note="O estudo de caso examinará as evidências, a fidelidade das explicações e a utilidade dos alertas para a triagem."
       />
     </Slide>
   )

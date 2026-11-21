@@ -46,7 +46,7 @@ export function SlideDashboard() {
             index="11"
             section="interface"
             title="Painel de análise"
-            lead="O painel reúne volume analisado, alertas por nível, filtros e o ranking que abre a ficha de cada registro."
+            lead="O painel em Streamlit reunirá o ranking de alertas, filtros e fichas com justificativas verificáveis."
           />
 
           <div className="mt-14 space-y-4">
@@ -54,10 +54,10 @@ export function SlideDashboard() {
               Filtros por órgão, período, categoria, favorecido e valor.
             </p>
             <p className="body-sm text-[var(--color-ink-muted)]">
-              Exportação em CSV para conferência externa.
+              A ordem dos alertas combina atipicidade e valor da despesa.
             </p>
             <p className="body-sm text-[var(--color-ink-muted)]">
-              A mesma ficha do alerta acessível a partir do ranking.
+              Cada ficha vincula a justificativa aos dados do registro.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export function SlideDashboard() {
         </div>
       </div>
 
-      <Footnote source="Anteprojeto, proposta de interface">Figura 6. Protótipo conceitual do painel, com dados fictícios.</Footnote>
+      <Footnote source="Anteprojeto, Metodologia">Figura 6. Protótipo conceitual do painel, com dados fictícios.</Footnote>
     </Slide>
   )
 }

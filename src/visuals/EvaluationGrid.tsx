@@ -2,22 +2,22 @@ const CRITERIA = [
   {
     key: 'evidencia',
     title: 'Verificabilidade',
-    detail: 'cada dado apontado é conferido diretamente na fonte oficial.',
+    detail: 'Conferência das evidências na fonte oficial.',
   },
   {
     key: 'fidelidade',
     title: 'Fidelidade explicativa',
-    detail: 'nenhuma assertiva fictícia ou sem respaldo nos dados.',
+    detail: 'A explicação é sustentada pelos dados do registro.',
   },
   {
     key: 'acionabilidade',
-    title: 'Acionabilidade',
-    detail: 'o alerta orienta uma análise preliminar fundamentada.',
+    title: 'Utilidade para a triagem',
+    detail: 'O alerta oferece elementos para orientar a análise preliminar.',
   },
   {
     key: 'ruido',
     title: 'Ruído benigno',
-    detail: 'mede falsos positivos de rotinas legítimas (ex.: folha de pagamento).',
+    detail: 'Proporção dos alertas prioritários explicados por rotinas administrativas legítimas.',
   },
 ]
 

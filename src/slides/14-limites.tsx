@@ -25,14 +25,14 @@ export function SlideLimits() {
         index="14"
         section="viabilidade"
         title="Limites e riscos"
-        lead="Assumir os limites é parte do método: cada risco tem origem declarada, e cada decisão evita aumentar a complexidade sem necessidade."
+        lead="A viabilidade será examinada em um recorte delimitado, com bases abertas, bibliotecas gratuitas e um computador convencional."
       />
 
       <div className="mt-8 flex flex-1 items-start">
         <RiskList />
       </div>
 
-      <Footnote source="Anteprojeto, seção de riscos e mitigação" />
+      <Footnote source="Anteprojeto, Introdução e Metodologia" />
     </Slide>
   )
 }

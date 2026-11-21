@@ -28,15 +28,15 @@ export function SlideSchedule() {
       <SlideHeader
         index="15"
         section="planejamento"
-        title="Cronograma do TCC"
-        lead="TCC I concentra fundamentação, preparação dos dados e o primeiro relatório. TCC II produz explicação, estudo de caso, redação e defesa."
+        title="Cronograma do TCC em 2027"
+        lead="Início em fevereiro, apresentação dos resultados preliminares na JACITEC em outubro e defesa final em dezembro."
       />
 
       <div className="mt-8 flex flex-1 flex-col justify-center">
         <Timeline />
       </div>
 
-      <Footnote source="Cronograma do anteprojeto. Datas sujeitas ao calendário do Ifes">Figura 8. Atividades planejadas por mês, de TCC I (2026/2) a TCC II (2027/1).</Footnote>
+      <Footnote source="Anteprojeto, Cronograma">Figura 8. Atividades planejadas de fevereiro a dezembro de 2027.</Footnote>
     </Slide>
   )
 }

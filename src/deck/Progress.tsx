@@ -24,7 +24,7 @@ export function Progress() {
       <div className="flex items-end justify-between px-8 pb-4">
         <div className="flex items-center">
           <img
-            src="/ifes-horizontal-cor.png"
+            src={`${import.meta.env.BASE_URL}ifes-horizontal-cor.png`}
             alt="Instituto Federal do Espírito Santo"
             className="ifes-logo-progress h-[72px] w-auto object-contain transition-[filter] duration-300"
           />

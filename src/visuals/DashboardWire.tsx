@@ -22,7 +22,7 @@ const LEVEL_COLOR: Record<string, string> = {
 }
 
 /**
- * Wireframe do dashboard descrito na seção 12 do anteprojeto: tela inicial com
+ * Wireframe da interface proposta no anteprojeto: tela inicial com
  * métricas, filtros, ranking e acesso à ficha do alerta.
  */
 export default function DashboardWire() {

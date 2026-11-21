@@ -14,11 +14,8 @@ const DIMENSIONS: Dimension[] = [
     icon: 'valor',
     accent: 'var(--color-ifverde)',
     features: [
-      'valor da despesa',
-      'log do valor',
-      'razão valor / mediana',
-      'posição percentual no grupo',
-      'desvio da categoria',
+      'Valor da despesa',
+      'Razão entre o valor do registro e a mediana do elemento de despesa',
     ],
   },
   {
@@ -26,11 +23,7 @@ const DIMENSIONS: Dimension[] = [
     icon: 'historico',
     accent: 'var(--color-iflima)',
     features: [
-      'frequência recente do favorecido',
-      'intervalo entre despesas',
-      'repetição de valores',
-      'concentração mensal',
-      'janela de ocorrências',
+      'Frequência mensal de despesas por favorecido',
     ],
   },
   {
@@ -38,19 +31,11 @@ const DIMENSIONS: Dimension[] = [
     icon: 'concentracao',
     accent: 'var(--color-verde)',
     features: [
-      'frequência no período',
-      'valor total recebido',
-      'participação na categoria',
-      'nº de unidades atendidas',
-      'valor médio associado',
+      'Participação de cada favorecido no total de gastos do órgão',
     ],
   },
 ]
 
-/**
- * Grade das três dimensões de atributos do anteprojeto (seção 7.3):
- * financeira, temporal e do favorecido.
- */
 export default function FeatureMatrix() {
   return (
     <div className="grid w-full grid-cols-3 gap-5" data-anim>

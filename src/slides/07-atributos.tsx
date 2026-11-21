@@ -36,7 +36,7 @@ export function SlideFeatures() {
         <FeatureMatrix />
       </div>
 
-      <Footnote source="Anteprojeto, metodologia de detecção e ranqueamento">Figura 2. Dimensões dos atributos das despesas.</Footnote>
+      <Footnote source="Anteprojeto, seção Dados e preparação">Figura 2. Dimensões dos atributos das despesas.</Footnote>
     </Slide>
   )
 }

@@ -42,7 +42,7 @@ export function SlideHero() {
               <span className="block">Radar</span>
             </span>
             <span className="block overflow-hidden" data-line>
-              <span className="block">Inteligente</span>
+              <span className="block">de Anomalias</span>
             </span>
             <span className="block overflow-hidden" data-line>
               <span className="block">de Despesas <span className="text-[var(--slide-accent)]">Públicas.</span></span>
@@ -50,8 +50,7 @@ export function SlideHero() {
           </h1>
 
           <p className="lead muted mt-8 max-w-[1000px]" data-fade>
-            Detecção multissinal, contextualização e explicação de padrões atípicos em
-            dados abertos.
+            Detecção, ranqueamento e explicação em linguagem natural a partir de dados abertos.
           </p>
 
           <div className="mt-12 flex items-end justify-between border-t border-[var(--slide-line)] pt-7" data-fade>

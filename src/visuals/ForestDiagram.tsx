@@ -22,8 +22,8 @@ function buildTree(spec: TreeSpec): Node[] {
 
   const recurse = (depth: number, x: number, parent?: number) => {
     const y = depth * stepY
-    const leaf = depth === maxDepth
-    const target = leaf && Math.abs(x - spec.split * width) < 14
+    const target = depth === 1 && x < width / 2
+    const leaf = target || depth === maxDepth
     const index = nodes.length
     nodes.push({ x, y, depth, leaf, target, parent })
     if (!leaf) {
@@ -120,13 +120,12 @@ export default function ForestDiagram() {
 
       <aside className="panel col-span-1 flex flex-col self-stretch px-6 py-5" data-tree-card style={{ '--accent': 'var(--color-ifvermelho)' } as CSSProperties}>
         <span className="panel-line" aria-hidden="true" />
-        <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">resultado</p>
+        <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">prioridade do alerta</p>
         <p className="panel-text-accent title-lg mt-3 text-[44px] leading-none">
-          1<span className="text-[26px]"> / profundidade</span>
+          <span className="block text-[23px]">P<sub>i</sub> = s<sub>i</sub> × ln(1 + |v<sub>i</sub>|)</span>
         </p>
         <p className="body-sm mt-5 text-[var(--color-ink-muted)]">
-          Cada registro é isolado por divisões aleatórias. Quanto menos divisões forem
-          necessárias, mais atípico é o registro.
+          s<sub>i</sub> é o escore de atipicidade normalizado. v<sub>i</sub> é o valor da despesa. O ranking vai da maior para a menor prioridade.
         </p>
         <ul className="mono-label mt-8 space-y-3 text-[11px] text-[var(--color-ink-muted)]">
           <li className="flex items-center gap-3">

@@ -5,6 +5,7 @@ import RadarScene from '@/visuals/RadarScene'
 
 const REFERENCES = [
   'CHANDOLA, V.; BANERJEE, A.; KUMAR, V. Anomaly detection: a survey. ACM Computing Surveys, 41(3), art. 15, 2009.',
+  'DUTRA, M. T. et al. Detecting and analyzing anomalies in city expenditure time series. Journal on Interactive Systems, 17(1), p. 456–472, 2026.',
   'HEVNER, A. R. et al. Design science in information systems research. MIS Quarterly, 28(1), p. 75–105, 2004.',
   'LIU, F. T.; TING, K. M.; ZHOU, Z.-H. Isolation Forest. IEEE International Conference on Data Mining, p. 413–422, 2008.',
   'PEDREGOSA, F. et al. Scikit-learn: machine learning in Python. Journal of Machine Learning Research, 12, p. 2825–2830, 2011.',
@@ -32,7 +33,7 @@ export function SlideClosing() {
           <div data-summary>
             <p className="eyebrow flex items-center gap-3 text-[var(--slide-accent)]">
               <span className="h-2 w-2 rounded-full bg-[var(--color-ifverde)]" aria-hidden="true" />
-              ENCERRAMENTO · RADAR INTELIGENTE
+              ENCERRAMENTO · RADAR DE ANOMALIAS
             </p>
 
             <h2 className="title-xl mt-8 max-w-[1500px] text-[94px] uppercase">
@@ -41,8 +42,7 @@ export function SlideClosing() {
             </h2>
 
             <p className="lead muted mt-10 max-w-[900px]">
-              Não um veredito automático, mas uma fila de atenção com evidência auditável e
-              contexto suficiente para a análise humana.
+              O Radar propõe uma fila priorizada de despesas atípicas, com evidências verificáveis para orientar a análise humana.
             </p>
           </div>
 

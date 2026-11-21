@@ -10,7 +10,7 @@ export function SlidePart1() {
         index="1"
         kicker="o problema"
         title="Problema de pesquisa"
-        note="Portais de transparência entregam o volume; o Radar propõe reduzir o esforço de localizar o que merece análise."
+        note="O volume de despesas dificulta a triagem manual. O Radar propõe priorizar registros atípicos para conferência."
       />
     </Slide>
   )
