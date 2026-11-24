@@ -22,10 +22,10 @@ export function SlideLimits() {
       tone="white"
       animate={build}>
       <SlideHeader
-        index="14"
-        section="viabilidade"
-        title="Limites e riscos"
-        lead="A viabilidade será examinada em um recorte delimitado, com bases abertas, bibliotecas gratuitas e um computador convencional."
+        index="11"
+        section="cuidados da proposta"
+        title="Limites e cuidados"
+        lead="O Radar organiza sinais para análise; os dados disponíveis e o contexto de cada despesa também precisam ser considerados."
       />
 
       <div className="mt-8 flex flex-1 items-start">

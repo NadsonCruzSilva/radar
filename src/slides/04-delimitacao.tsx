@@ -10,10 +10,9 @@ const SCOPE = [
 ]
 
 const OBJECTIVES = [
-  'Preparar os dados e calcular atributos de valor, frequência e favorecido',
-  'Detectar despesas atípicas e ordenar os alertas por prioridade',
-  'Exibir alertas e evidências verificáveis em um painel interativo',
-  'Avaliar os alertas e as explicações em um estudo de caso documental',
+  'Organizar os registros em alertas fáceis de explorar',
+  'Mostrar por que cada despesa chamou atenção',
+  'Avaliar se os alertas ajudam a orientar a conferência',
 ]
 
 export function SlideScope() {
@@ -50,7 +49,7 @@ export function SlideScope() {
       <SlideHeader
         index="04"
         section="delimitação"
-        title="Objetivos e recorte"
+        title="O que o projeto pretende fazer"
       />
 
       <div className="mt-12 grid flex-1 grid-cols-2 gap-6">
@@ -77,7 +76,7 @@ export function SlideScope() {
           style={{ '--accent': 'var(--color-ifvermelho)' } as CSSProperties}
         >
           <span className="panel-line" aria-hidden="true" />
-          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Objetivos específicos</h3>
+          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Objetivo da proposta</h3>
           <ul className="mt-8 space-y-4">
             {OBJECTIVES.map((item) => (
               <li key={item} className="flex items-baseline gap-4 border-t border-[var(--color-border)]/60 pt-4" data-item-objective>

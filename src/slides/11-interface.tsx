@@ -43,10 +43,10 @@ export function SlideDashboard() {
       <div className="grid h-full grid-cols-[520px_1fr] gap-12">
         <div className="flex flex-col justify-center">
           <SlideHeader
-            index="11"
-            section="interface"
-            title="Painel de análise"
-            lead="O painel em Streamlit reunirá o ranking de alertas, filtros e fichas com justificativas verificáveis."
+            index="09"
+            section="exploração"
+            title="Como o usuário exploraria o Radar"
+            lead="Um painel reúne os alertas, filtros e informações para ajudar o usuário a entender cada caso."
           />
 
           <div className="mt-14 space-y-4">
@@ -54,7 +54,7 @@ export function SlideDashboard() {
               Filtros por órgão, período, categoria, favorecido e valor.
             </p>
             <p className="body-sm text-[var(--color-ink-muted)]">
-              A ordem dos alertas combina atipicidade e valor da despesa.
+              Os registros aparecem organizados por prioridade para facilitar a triagem.
             </p>
             <p className="body-sm text-[var(--color-ink-muted)]">
               Cada ficha vincula a justificativa aos dados do registro.

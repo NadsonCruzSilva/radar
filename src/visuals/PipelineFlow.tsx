@@ -2,17 +2,15 @@ import type { CSSProperties } from 'react'
 import { ResearchIcon } from './ResearchIcon'
 
 const STEPS = [
-  { key: 'coleta', label: 'Coleta', detail: 'fonte pública' },
-  { key: 'tratamento', label: 'Tratamento', detail: 'duplicidades, ausências e identificadores pessoais' },
-  { key: 'atributos', label: 'Atributos', detail: 'valor, frequência e favorecido' },
-  { key: 'deteccao', label: 'Detecção e prioridade', detail: 'Isolation Forest e valor da despesa' },
-  { key: 'contexto', label: 'Explicação', detail: 'regras baseadas nos dados' },
-  { key: 'exploracao', label: 'Painel', detail: 'ranking, filtros e fichas' },
+  { key: 'coleta', label: 'Dados públicos', detail: 'registros de despesas' },
+  { key: 'valor', label: 'Comparação', detail: 'o que se destaca no conjunto' },
+  { key: 'historico', label: 'Alerta explicado', detail: 'o que chamou atenção' },
+  { key: 'exploracao', label: 'Conferência', detail: 'consulta à fonte original' },
 ] as const
 
 export default function PipelineFlow() {
   return (
-    <div className="grid w-full grid-cols-6 gap-4" data-flow>
+    <div className="grid w-full grid-cols-4 gap-5" data-flow>
       {STEPS.map((step, i) => (
         <div key={step.key} className="relative flex flex-col" data-step>
           <div className="flex items-center gap-3">

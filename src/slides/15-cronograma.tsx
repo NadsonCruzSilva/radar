@@ -26,7 +26,7 @@ export function SlideSchedule() {
       tone="paper"
       animate={build}>
       <SlideHeader
-        index="15"
+        index="12"
         section="planejamento"
         title="Cronograma do TCC em 2027"
         lead="Início em fevereiro, apresentação dos resultados preliminares na JACITEC em outubro e defesa final em dezembro."

@@ -2,9 +2,9 @@ import type { CSSProperties } from 'react'
 
 const VIEWS = [
   { label: 'registros analisados', value: '18.402', accent: 'var(--color-verde)' },
-  { label: 'alertas priorizados', value: '50', accent: 'var(--color-ifverde)' },
-  { label: 'nível alto', value: '12', accent: 'var(--color-ifvermelho)' },
-  { label: 'nível médio', value: '23', accent: 'var(--color-iflima)' },
+  { label: 'alertas para conferir', value: '50', accent: 'var(--color-ifverde)' },
+  { label: 'atenção alta', value: '12', accent: 'var(--color-ifvermelho)' },
+  { label: 'atenção média', value: '23', accent: 'var(--color-iflima)' },
 ]
 
 const FILTERS = ['órgão', 'período', 'categoria', 'favorecido', 'valor']
@@ -64,8 +64,8 @@ export default function DashboardWire() {
 
         <div className="px-6 py-5">
           <div className="flex items-center justify-between">
-            <p className="mono-label text-[10px] text-[var(--color-ink-muted)]">ranking de alertas</p>
-            <span className="mono-label text-[10px] text-[var(--color-ink-muted)]">ordenado por prioridade</span>
+            <p className="mono-label text-[10px] text-[var(--color-ink-muted)]">despesas em destaque</p>
+            <span className="mono-label text-[10px] text-[var(--color-ink-muted)]">organizadas para conferência</span>
           </div>
           <div className="mt-4 divide-y divide-[var(--color-border)]/40">
             {ROWS.map((row, i) => (
@@ -85,7 +85,7 @@ export default function DashboardWire() {
           </div>
 
           <div className="mt-4 flex items-center gap-2 border-t border-[var(--color-border)]/50 pt-4" data-ficha>
-            <span className="mono-label text-[10px] text-[var(--color-ink-muted)]">selecionar alerta →</span>
+            <span className="mono-label text-[10px] text-[var(--color-ink-muted)]">selecionar despesa →</span>
             <span className="h-6 flex-1 border-l border-[var(--color-border)]/50" />
             <span className="mono-label rounded-full bg-[var(--color-ink)] px-3 py-1 text-[10px] text-[var(--color-white)]">
               abrir ficha

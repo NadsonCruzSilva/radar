@@ -10,7 +10,7 @@ export function SlidePart1() {
         index="1"
         kicker="o problema"
         title="Problema de pesquisa"
-        note="O volume de despesas dificulta a triagem manual. O Radar propõe priorizar registros atípicos para conferência."
+        note="Há muitos registros públicos e pouco tempo para analisar cada despesa. O Radar propõe ajudar a encontrar o que merece ser conferido."
       />
     </Slide>
   )

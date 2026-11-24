@@ -6,9 +6,9 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 import { ResearchIcon } from '@/visuals/ResearchIcon'
 
 const SIGNALS = [
-  { icon: 'coleta' as const, label: 'Dados abertos', detail: 'Os portais de transparência disponibilizam registros de execução orçamentária.' },
-  { icon: 'historico' as const, label: 'Triagem manual', detail: 'O volume de registros dificulta a análise individual.' },
-  { icon: 'valor' as const, label: 'Análise por categoria', detail: 'Totais agregados podem ocultar desvios em categorias específicas.' },
+  { icon: 'coleta' as const, label: 'Muitos dados públicos', detail: 'Os portais reúnem registros de diferentes despesas e órgãos.' },
+  { icon: 'historico' as const, label: 'Análise demorada', detail: 'É difícil conferir cada registro manualmente.' },
+  { icon: 'valor' as const, label: 'Diferenças escondidas', detail: 'Totais gerais podem ocultar despesas que se destacam.' },
 ]
 
 export function SlideProblem() {
@@ -39,8 +39,8 @@ export function SlideProblem() {
         <div className="flex flex-col">
           <div className="relative border-l-4 border-[var(--color-ifverde)] pl-8" data-quote>
             <p className="title-lg text-[40px] leading-[1.2]">
-              Como identificar, priorizar e explicar despesas públicas atípicas a partir de dados abertos,
-              de modo que cidadãos e analistas possam conferir as evidências de cada alerta?
+              Como ajudar cidadãos e analistas a localizar despesas públicas que merecem ser conferidas —
+              e mostrar por que elas chamaram atenção?
             </p>
             <span className="mono-label mt-6 block text-[var(--color-ink-muted)]">
               questão de pesquisa

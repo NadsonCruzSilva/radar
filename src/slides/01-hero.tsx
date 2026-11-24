@@ -50,7 +50,7 @@ export function SlideHero() {
           </h1>
 
           <p className="lead muted mt-8 max-w-[1000px]" data-fade>
-            Detecção, ranqueamento e explicação em linguagem natural a partir de dados abertos.
+            Uma proposta para encontrar despesas que merecem atenção e facilitar a conferência dos dados públicos.
           </p>
 
           <div className="mt-12 flex items-end justify-between border-t border-[var(--slide-line)] pt-7" data-fade>

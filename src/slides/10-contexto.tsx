@@ -20,10 +20,10 @@ export function SlideContext() {
       tone="paper"
       animate={build}>
       <SlideHeader
-        index="10"
-        section="contextualização"
-        title="Como conferir uma evidência"
-        lead="Cada alerta remete ao registro de origem e aos atributos usados para interpretar a despesa."
+        index="08"
+        section="conferência"
+        title="Como conferir um alerta"
+        lead="O usuário pode voltar à fonte, localizar a despesa e verificar a comparação apresentada."
       />
 
       <div className="mt-6 grid flex-1 grid-cols-[1fr_560px] items-center gap-16">
@@ -36,14 +36,14 @@ export function SlideContext() {
             <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">caso ilustrativo</p>
             <p className="title-lg mt-2 text-[30px]">{ALERT_SAMPLE.id}</p>
             <p className="body-sm mt-2 text-[var(--color-ink-muted)]">
-              Despesa de {ALERT_SAMPLE.valor}. A mediana do mesmo elemento de despesa é de {ALERT_SAMPLE.mediana}.
+              Despesa de {ALERT_SAMPLE.valor}. Registros semelhantes têm valor mediano de {ALERT_SAMPLE.mediana}.
             </p>
           </div>
 
           <div className="border-t border-[var(--color-border)] pt-5">
             <p className="title-lg text-[22px]">Conferência na base oficial</p>
             <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-              Localizar o registro, confirmar o valor e refazer a comparação com os registros do mesmo elemento.
+              Localizar o registro, confirmar o valor e comparar com despesas semelhantes.
             </p>
           </div>
         </aside>
