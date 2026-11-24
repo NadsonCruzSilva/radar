@@ -2,10 +2,10 @@ import type { CSSProperties } from 'react'
 import { ResearchIcon } from './ResearchIcon'
 
 const STEPS = [
-  { key: 'coleta', label: 'Dados públicos', detail: 'registros de despesas' },
-  { key: 'valor', label: 'Comparação', detail: 'o que se destaca no conjunto' },
-  { key: 'historico', label: 'Alerta explicado', detail: 'o que chamou atenção' },
-  { key: 'exploracao', label: 'Conferência', detail: 'consulta à fonte original' },
+  { key: 'coleta', label: 'Dados públicos', detail: 'O Radar parte dos registros de despesas do órgão e do período escolhidos.' },
+  { key: 'valor', label: 'Comparação', detail: 'O Radar procura diferenças entre despesas semelhantes, como as da mesma categoria.' },
+  { key: 'historico', label: 'Alerta explicado', detail: 'Uma ficha mostra qual despesa se destacou e qual comparação chamou atenção.' },
+  { key: 'exploracao', label: 'Conferência', detail: 'O usuário consulta a fonte oficial para verificar o registro e interpretar a diferença.' },
 ] as const
 
 export default function PipelineFlow() {
@@ -30,24 +30,15 @@ export default function PipelineFlow() {
           </div>
           <div
             data-card
-            className="panel mt-4 flex flex-1 flex-col px-4 py-5"
+            className="panel mt-4 flex flex-1 flex-col px-7 py-7"
             style={{ '--accent': 'var(--color-ifverde)' } as CSSProperties}
           >
             <span className="panel-line" aria-hidden="true" />
             <ResearchIcon name={step.key} className="mb-4 h-11 w-11 text-[var(--slide-accent)]" />
             <p className="panel-text-accent title-lg text-[24px] leading-tight">{step.label}</p>
-            <p className="mono-label mt-3 text-[11px] text-[var(--color-ink-muted)]">
+            <p className="body-sm mt-4 text-[var(--color-ink-muted)]">
               {step.detail}
             </p>
-            <span className="mt-auto flex items-center gap-1.5 pt-5" aria-hidden="true">
-              {STEPS.map((_, dot) => (
-                <span
-                  key={dot}
-                  className="h-1 w-1 rounded-full"
-                  style={{ background: dot <= i ? 'var(--color-ifverde)' : 'var(--color-border)' }}
-                />
-              ))}
-            </span>
           </div>
         </div>
       ))}

@@ -31,7 +31,7 @@ export function SlideExplanation() {
             <li className="border-t border-[var(--color-border)] pt-4">
               <p className="title-lg text-[22px]">Por que apareceu?</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                A ficha compara a despesa com registros semelhantes e aponta diferenças relevantes.
+                Neste exemplo, o valor pago pela manutenção ficou em cerca de sete vezes a mediana da categoria.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
@@ -41,9 +41,9 @@ export function SlideExplanation() {
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">O que o alerta não diz?</p>
+              <p className="title-lg text-[22px]">Como interpretar?</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                Ele não confirma uma irregularidade. É um ponto de partida para análise humana.
+                A diferença de valor é um motivo para conferir o contexto da despesa.
               </p>
             </li>
           </ul>

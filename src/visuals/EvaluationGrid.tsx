@@ -25,10 +25,12 @@ export default function EvaluationGrid() {
   return (
     <div className="grid w-full grid-cols-[1fr_460px] gap-20" data-anim>
       <div className="flex flex-col justify-center border-l-4 border-[var(--color-ifverde)] pl-8">
-        <p className="title-lg text-[34px] leading-tight">O estudo vai observar alertas e também despesas que não ficaram no topo.</p>
-        <p className="body-sm mt-5 max-w-[520px] text-[var(--color-ink-muted)]">
-          Assim, será possível avaliar a utilidade das sinalizações sem tratar o resultado do sistema como uma conclusão.
-        </p>
+        <p className="title-lg text-[34px] leading-tight">O que será examinado?</p>
+        <ul className="body-sm mt-5 max-w-[740px] list-disc space-y-3 pl-7 text-[var(--color-ink-muted)]">
+          <li>Alertas no topo da lista de prioridades.</li>
+          <li>Despesas selecionadas fora desse grupo.</li>
+          <li>Informações que podem ser confirmadas no registro oficial.</li>
+        </ul>
       </div>
 
       <ol className="space-y-6">

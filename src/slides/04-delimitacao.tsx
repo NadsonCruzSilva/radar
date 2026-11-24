@@ -6,7 +6,8 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 const SCOPE = [
   'Um exercício financeiro encerrado',
   'Uma unidade gestora estadual ou federal',
-  'Despesas públicas disponíveis em dados abertos',
+  'Registros de despesas publicados em dados abertos',
+  'A fonte preferencial é o SIGEFES, com o Portal da Transparência federal como alternativa.',
 ]
 
 const OBJECTIVES = [
@@ -50,9 +51,10 @@ export function SlideScope() {
         index="04"
         section="delimitação"
         title="O que o projeto pretende fazer"
+        lead="O recorte de uma unidade gestora e um ano de dados torna viável a conferência dos registros."
       />
 
-      <div className="mt-12 grid flex-1 grid-cols-2 gap-6">
+      <div className="my-10 grid grid-cols-2 gap-6">
         <div
           className="panel flex flex-col px-10 py-8"
           data-col-scope

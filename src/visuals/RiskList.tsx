@@ -3,17 +3,17 @@ import type { CSSProperties } from 'react'
 const CARDS = [
   {
     title: 'Dados incompletos',
-    detail: 'Informações ausentes ou pouco detalhadas podem limitar o que será possível conferir.',
+    detail: 'Uma descrição genérica pode dificultar entender quais serviços foram pagos.',
     accent: 'var(--color-iflima)',
   },
   {
-    title: 'Diferença não é prova',
-    detail: 'Uma despesa fora do padrão pode ter uma explicação administrativa legítima.',
+    title: 'Contexto da despesa',
+    detail: 'Um reparo emergencial, por exemplo, pode explicar um valor acima do habitual.',
     accent: 'var(--color-ifvermelho)',
   },
   {
     title: 'Análise humana',
-    detail: 'O Radar organiza informações para a triagem; a interpretação e a apuração ficam com as pessoas.',
+    detail: 'A pessoa responsável pela análise confere os dados e decide se vale buscar mais informações.',
     accent: 'var(--color-ifverde)',
   },
 ]

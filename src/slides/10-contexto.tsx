@@ -5,6 +5,12 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 import { ALERT_SAMPLE } from '@/visuals/alert-sample'
 import RelatedGraph from '@/visuals/RelatedGraph'
 
+const CHECK_STEPS = [
+  'Encontre o registro da unidade e do período indicados na ficha.',
+  'Confirme o valor e a categoria da despesa na fonte oficial.',
+  'Compare com outras despesas de manutenção predial no recorte.',
+]
+
 export function SlideContext() {
   const build = useCallback((root: HTMLElement) => {
     const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
@@ -35,16 +41,14 @@ export function SlideContext() {
           <div className="border-t border-[var(--color-border)] pt-5">
             <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">caso ilustrativo</p>
             <p className="title-lg mt-2 text-[30px]">{ALERT_SAMPLE.id}</p>
-            <p className="body-sm mt-2 text-[var(--color-ink-muted)]">
-              Despesa de {ALERT_SAMPLE.valor}. Registros semelhantes têm valor mediano de {ALERT_SAMPLE.mediana}.
-            </p>
+            <p className="body-sm mt-2 text-[var(--color-ink-muted)]">{ALERT_SAMPLE.categoria} · {ALERT_SAMPLE.periodo}</p>
           </div>
 
           <div className="border-t border-[var(--color-border)] pt-5">
             <p className="title-lg text-[22px]">Conferência na base oficial</p>
-            <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-              Localizar o registro, confirmar o valor e comparar com despesas semelhantes.
-            </p>
+            <ol className="body-sm mt-3 list-decimal space-y-2 pl-7 text-[var(--color-ink-muted)]">
+              {CHECK_STEPS.map((step) => <li key={step}>{step}</li>)}
+            </ol>
           </div>
         </aside>
       </div>

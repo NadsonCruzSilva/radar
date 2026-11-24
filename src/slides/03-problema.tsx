@@ -35,11 +35,11 @@ export function SlideProblem() {
         title="Pergunta de pesquisa"
       />
 
-      <div className="mt-14 grid flex-1 grid-cols-[1.35fr_1fr] gap-20">
+      <div className="mt-14 grid grid-cols-[1.35fr_1fr] gap-20">
         <div className="flex flex-col">
           <div className="relative border-l-4 border-[var(--color-ifverde)] pl-8" data-quote>
             <p className="title-lg text-[40px] leading-[1.2]">
-              Como ajudar cidadãos e analistas a localizar despesas públicas que merecem ser conferidas —
+              Como ajudar cidadãos e analistas a localizar despesas públicas que merecem ser conferidas
               e mostrar por que elas chamaram atenção?
             </p>
             <span className="mono-label mt-6 block text-[var(--color-ink-muted)]">
@@ -59,6 +59,14 @@ export function SlideProblem() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="mt-12 max-w-[1100px] border-t border-[var(--color-border)] pt-6">
+        <p className="title-lg text-[26px]">O que o total do mês pode esconder?</p>
+        <p className="body-sm mt-3 text-[var(--color-ink-muted)]">
+          Uma despesa com manutenção predial pode passar despercebida no total do órgão.
+          A diferença fica visível quando comparamos esse valor com outras despesas de manutenção.
+        </p>
       </div>
 
       <Footnote source="Anteprojeto, Introdução. Lei de Acesso à Informação (2011) e Dutra et al. (2026)." />
