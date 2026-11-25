@@ -7,13 +7,13 @@ const SCOPE = [
   'Um exercício financeiro encerrado',
   'Uma unidade gestora estadual ou federal',
   'Registros de despesas publicados em dados abertos',
-  'A fonte preferencial é o SIGEFES, com o Portal da Transparência federal como alternativa.',
+  'SIGEFES como fonte preferencial e Portal da Transparência federal como alternativa',
 ]
 
 const OBJECTIVES = [
-  'Organizar os registros em alertas fáceis de explorar',
-  'Mostrar por que cada despesa chamou atenção',
-  'Avaliar se os alertas ajudam a orientar a conferência',
+  'Detectar despesas atípicas',
+  'Priorizar alertas por atipicidade e valor financeiro',
+  'Explicar os alertas com evidências verificáveis',
 ]
 
 export function SlideScope() {
@@ -50,8 +50,8 @@ export function SlideScope() {
       <SlideHeader
         index="04"
         section="delimitação"
-        title="O que o projeto pretende fazer"
-        lead="O recorte de uma unidade gestora e um ano de dados torna viável a conferência dos registros."
+        title="Objetivo e escopo"
+        lead="Desenvolver e avaliar um protótipo para apoiar a triagem de despesas públicas."
       />
 
       <div className="my-10 grid grid-cols-2 gap-6">

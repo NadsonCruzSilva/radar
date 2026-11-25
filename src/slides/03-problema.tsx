@@ -6,9 +6,9 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 import { ResearchIcon } from '@/visuals/ResearchIcon'
 
 const SIGNALS = [
-  { icon: 'coleta' as const, label: 'Muitos dados públicos', detail: 'Os portais reúnem registros de diferentes despesas e órgãos.' },
-  { icon: 'historico' as const, label: 'Análise demorada', detail: 'É difícil conferir cada registro manualmente.' },
-  { icon: 'valor' as const, label: 'Diferenças escondidas', detail: 'Totais gerais podem ocultar despesas que se destacam.' },
+  { icon: 'coleta' as const, label: 'Volume de registros', detail: 'Conferir cada despesa manualmente toma tempo.' },
+  { icon: 'historico' as const, label: 'Agregação dos dados', detail: 'Totais mensais podem ocultar desvios em despesas individuais.' },
+  { icon: 'valor' as const, label: 'Contexto para comparar', detail: 'O valor de uma despesa ganha sentido diante de registros semelhantes.' },
 ]
 
 export function SlideProblem() {
@@ -39,12 +39,8 @@ export function SlideProblem() {
         <div className="flex flex-col">
           <div className="relative border-l-4 border-[var(--color-ifverde)] pl-8" data-quote>
             <p className="title-lg text-[40px] leading-[1.2]">
-              Como ajudar cidadãos e analistas a localizar despesas públicas que merecem ser conferidas
-              e mostrar por que elas chamaram atenção?
+              Como identificar despesas públicas atípicas e explicar por que merecem conferência?
             </p>
-            <span className="mono-label mt-6 block text-[var(--color-ink-muted)]">
-              questão de pesquisa
-            </span>
           </div>
         </div>
 
@@ -62,10 +58,9 @@ export function SlideProblem() {
       </div>
 
       <div className="mt-12 max-w-[1100px] border-t border-[var(--color-border)] pt-6">
-        <p className="title-lg text-[26px]">O que o total do mês pode esconder?</p>
+        <p className="title-lg text-[26px]">Exemplo breve</p>
         <p className="body-sm mt-3 text-[var(--color-ink-muted)]">
-          Uma despesa com manutenção predial pode passar despercebida no total do órgão.
-          A diferença fica visível quando comparamos esse valor com outras despesas de manutenção.
+          Um gasto com manutenção predial pode parecer comum no total do mês e se destacar entre despesas da mesma categoria.
         </p>
       </div>
 

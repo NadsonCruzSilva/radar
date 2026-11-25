@@ -25,7 +25,7 @@ export function SlideLimits() {
         index="11"
         section="cuidados da proposta"
         title="Limites e cuidados"
-        lead="O Radar organiza sinais para análise; os dados disponíveis e o contexto de cada despesa também precisam ser considerados."
+        lead="Os alertas orientam a triagem. A apuração de irregularidades exige análise humana."
       />
 
       <div className="mt-8 flex flex-1 items-start">

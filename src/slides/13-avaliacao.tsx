@@ -19,8 +19,8 @@ export function SlideEvaluation() {
       <SlideHeader
         index="10"
         section="avaliação"
-        title="Como a proposta será avaliada"
-        lead="Um estudo de caso vai examinar alertas e registros selecionados para verificar se as informações ajudam a orientar a conferência."
+        title="Avaliação dos alertas"
+        lead="Estudo de caso documental com 40 registros de um mesmo exercício financeiro."
       />
 
       <div className="mt-8 flex flex-1 items-start">

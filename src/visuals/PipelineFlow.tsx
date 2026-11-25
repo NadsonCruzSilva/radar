@@ -2,10 +2,10 @@ import type { CSSProperties } from 'react'
 import { ResearchIcon } from './ResearchIcon'
 
 const STEPS = [
-  { key: 'coleta', label: 'Dados públicos', detail: 'O Radar parte dos registros de despesas do órgão e do período escolhidos.' },
-  { key: 'valor', label: 'Comparação', detail: 'O Radar procura diferenças entre despesas semelhantes, como as da mesma categoria.' },
-  { key: 'historico', label: 'Alerta explicado', detail: 'Uma ficha mostra qual despesa se destacou e qual comparação chamou atenção.' },
-  { key: 'exploracao', label: 'Conferência', detail: 'O usuário consulta a fonte oficial para verificar o registro e interpretar a diferença.' },
+  { key: 'coleta', label: 'Preparar dados', detail: 'Tratar duplicidades e valores ausentes nos registros oficiais.' },
+  { key: 'historico', label: 'Calcular indicadores', detail: 'Comparar o valor com a mediana do elemento de despesa e medir frequência mensal e concentração por favorecido.' },
+  { key: 'valor', label: 'Detectar atipicidades', detail: 'Usar Isolation Forest para estimar o grau de atipicidade de cada registro.' },
+  { key: 'exploracao', label: 'Priorizar e explicar', detail: 'Combinar atipicidade e valor financeiro no ranking. Gerar explicações por regras.' },
 ] as const
 
 export default function PipelineFlow() {

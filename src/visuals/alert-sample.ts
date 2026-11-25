@@ -9,7 +9,7 @@ export const ALERT_SAMPLE = {
   mediana: 'R$ 25.300,00',
   favorecido: 'Empresa X · 3 despesas no recorte',
   orgao: 'Unidade gestora A',
-  categoria: 'Serviços de manutenção predial',
+  categoria: 'Locação de veículos',
   periodo: 'março de 2025',
 }
 
@@ -19,7 +19,7 @@ export const ALERT_REASONS: Reason[] = [
     detail: 'R$ 182,4 mil, 7,2 × a mediana dos registros da mesma categoria.',
   },
   {
-    label: 'favorecido com baixa frequência',
+    label: 'frequência do favorecido',
     detail: 'O favorecido aparece em três despesas no exercício.',
   },
   {

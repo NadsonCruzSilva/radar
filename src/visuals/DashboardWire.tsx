@@ -10,8 +10,8 @@ const VIEWS = [
 const FILTERS = ['órgão', 'período', 'categoria', 'favorecido', 'valor']
 
 const ROWS = [
-  { id: 'ALT-2 391', category: 'Manutenção predial', value: 'R$ 182.400', level: 'alto' },
-  { id: 'ALT-1 845', category: 'Locação de veículos', value: 'R$ 96.900', level: 'alto' },
+  { id: 'ALT-2 391', category: 'Locação de veículos', value: 'R$ 182.400', level: 'alto' },
+  { id: 'ALT-1 845', category: 'Obras e instalações', value: 'R$ 96.900', level: 'alto' },
   { id: 'ALT-3 102', category: 'Material de consumo', value: 'R$ 71.250', level: 'médio' },
   { id: 'ALT-0 774', category: 'Serviços de TI', value: 'R$ 58.800', level: 'médio' },
 ]

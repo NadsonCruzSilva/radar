@@ -45,16 +45,15 @@ export function SlideDashboard() {
           <SlideHeader
             index="09"
             section="exploração"
-            title="Como o usuário exploraria o Radar"
-            lead="Um painel reúne os alertas, filtros e informações para ajudar o usuário a entender cada caso."
+            title="Painel de alertas"
+            lead="O painel proposto em Streamlit organiza as despesas por prioridade."
           />
 
           <div className="mt-10 border-t border-[var(--color-border)] pt-5">
-            <p className="title-lg text-[24px]">Exemplo de uso</p>
             <ol className="body-sm mt-4 list-decimal space-y-3 pl-7 text-[var(--color-ink-muted)]">
-              <li>Filtrar pela categoria de manutenção predial.</li>
-              <li>Selecionar uma despesa na lista priorizada.</li>
-              <li>Abrir a ficha para entender o destaque e localizar a fonte oficial.</li>
+              <li>Filtrar por período, categoria, favorecido ou valor.</li>
+              <li>Selecionar um alerta no ranking.</li>
+              <li>Abrir a ficha com as evidências.</li>
             </ol>
           </div>
         </div>

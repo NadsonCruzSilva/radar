@@ -13,6 +13,7 @@ export default function AlertSheet() {
         <div>
           <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">alerta</p>
           <p className="panel-text-accent title-lg mt-2 text-[34px]">{ALERT_SAMPLE.id}</p>
+          <p className="body-sm mt-1 text-[var(--color-ink-muted)]">{ALERT_SAMPLE.categoria}</p>
         </div>
         <span className="tech-pill tech-pill--muted">exemplo fictício</span>
       </header>
@@ -46,10 +47,8 @@ export default function AlertSheet() {
         </ul>
       </div>
 
-      <footer className="border-t border-[var(--color-border)]/50 px-10 py-5">
-        <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">
-          A atipicidade estatística orienta a triagem. A apuração de irregularidades requer análise humana.
-        </p>
+      <footer className="border-t border-[var(--color-border)]/50 px-10 py-4">
+        <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">Consultar registro na fonte oficial →</p>
       </footer>
     </div>
   )

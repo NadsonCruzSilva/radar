@@ -1,23 +1,23 @@
 const CRITERIA = [
   {
     key: 'evidencia',
-    title: 'É possível conferir?',
-    detail: 'As informações do alerta podem ser verificadas na fonte?',
+    title: 'Evidências verificáveis',
+    detail: 'Os dados da ficha correspondem ao registro oficial?',
   },
   {
     key: 'fidelidade',
-    title: 'A explicação faz sentido?',
-    detail: 'O motivo apresentado corresponde ao que aparece no registro?',
+    title: 'Fidelidade da explicação',
+    detail: 'A justificativa reflete os indicadores calculados?',
   },
   {
     key: 'acionabilidade',
-    title: 'Ajuda a começar a análise?',
-    detail: 'O alerta mostra por onde o usuário pode iniciar a conferência?',
+    title: 'Utilidade para triagem',
+    detail: 'O alerta indica o que conferir primeiro?',
   },
   {
     key: 'ruido',
-    title: 'Há explicações legítimas?',
-    detail: 'Algumas diferenças podem decorrer de rotinas administrativas normais.',
+    title: 'Contexto administrativo',
+    detail: 'Qual proporção dos alertas prioritários é explicada por rotinas legítimas?',
   },
 ]
 
@@ -25,11 +25,10 @@ export default function EvaluationGrid() {
   return (
     <div className="grid w-full grid-cols-[1fr_460px] gap-20" data-anim>
       <div className="flex flex-col justify-center border-l-4 border-[var(--color-ifverde)] pl-8">
-        <p className="title-lg text-[34px] leading-tight">O que será examinado?</p>
+        <p className="title-lg text-[34px] leading-tight">Amostra</p>
         <ul className="body-sm mt-5 max-w-[740px] list-disc space-y-3 pl-7 text-[var(--color-ink-muted)]">
-          <li>Alertas no topo da lista de prioridades.</li>
-          <li>Despesas selecionadas fora desse grupo.</li>
-          <li>Informações que podem ser confirmadas no registro oficial.</li>
+          <li>30 registros no topo do ranking.</li>
+          <li>10 registros de controle sorteados fora desse grupo.</li>
         </ul>
       </div>
 

@@ -10,7 +10,7 @@ export function SlidePart1() {
         index="1"
         kicker="o problema"
         title="Problema de pesquisa"
-        note="Há muitos registros públicos e pouco tempo para analisar cada despesa. O Radar propõe ajudar a encontrar o que merece ser conferido."
+        note="Os portais publicam milhares de registros. Quais despesas merecem ser conferidas primeiro?"
       />
     </Slide>
   )

@@ -37,16 +37,16 @@ export function SlidePipeline() {
       animate={build}>
       <SlideHeader
         index="06"
-        section="funcionamento proposto"
-        title="Da informação ao alerta"
-        lead="O Radar organiza os registros em uma sequência simples: encontra diferenças, explica os sinais e facilita a conferência."
+        section="metodologia"
+        title="Da coleta ao ranking de alertas"
+        lead="A pesquisa segue a Design Science Research para desenvolver, demonstrar e avaliar o protótipo."
       />
 
       <div className="mt-8 flex flex-1 flex-col justify-center">
         <PipelineFlow />
       </div>
 
-      <Footnote source="Anteprojeto, Metodologia">Visão simplificada da experiência proposta.</Footnote>
+      <Footnote source="Anteprojeto, Metodologia" />
     </Slide>
   )
 }

@@ -23,27 +23,26 @@ export function SlideExplanation() {
           <SlideHeader
             index="07"
             section="o alerta"
-            title="O que aparece em um alerta?"
-            lead="A ficha resume o que se destacou e oferece informações para que a pessoa possa conferir o registro."
+            title="Ficha do alerta"
           />
 
-          <ul className="mt-14 space-y-5">
+          <ul className="mt-10 space-y-5">
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">Por que apareceu?</p>
+              <p className="title-lg text-[22px]">Identificação</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                Neste exemplo, o valor pago pela manutenção ficou em cerca de sete vezes a mediana da categoria.
+                Valor, categoria, favorecido, unidade gestora e período.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">O que conferir?</p>
+              <p className="title-lg text-[22px]">Justificativa</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                Valor, favorecido, período e outras informações disponíveis na fonte.
+                Indicadores que ajudam a entender por que a despesa se destacou.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">Como interpretar?</p>
+              <p className="title-lg text-[22px]">Rastreabilidade</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                A diferença de valor é um motivo para conferir o contexto da despesa.
+                Referência ao registro na fonte oficial.
               </p>
             </li>
           </ul>

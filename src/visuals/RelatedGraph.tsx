@@ -1,5 +1,3 @@
-import { ALERT_SAMPLE } from './alert-sample'
-
 type Related = {
   label: string
   detail: string
@@ -13,7 +11,7 @@ const RADIUS = 220
 const RELATIONS: Related[] = [
   { label: 'Fonte oficial', detail: 'registro de origem', angle: -90, color: 'var(--color-ifverde)' },
   { label: 'Comparação', detail: 'despesas semelhantes', angle: 30, color: 'var(--color-iflima)' },
-  { label: 'Valor', detail: 'despesa registrada', angle: 150, color: 'var(--color-ifvermelho)' },
+  { label: 'Dados', detail: 'valor e categoria', angle: 150, color: 'var(--color-ifvermelho)' },
 ]
 
 function polar(angleDeg: number, radius = RADIUS) {
@@ -26,7 +24,7 @@ function polar(angleDeg: number, radius = RADIUS) {
 
 export default function RelatedGraph() {
   return (
-    <svg viewBox="0 0 760 680" className="max-h-[620px] w-full" role="img" aria-label="Elementos para conferir a evidência de um alerta: fonte oficial, elemento de despesa e valor do registro">
+    <svg viewBox="0 0 760 680" className="max-h-[620px] w-full" role="img" aria-label="Conferência do alerta pela fonte oficial, pelos dados registrados e pela comparação com despesas semelhantes">
       <g data-anim>
         {RELATIONS.map((relation, i) => {
           const p = polar(relation.angle)
@@ -67,19 +65,11 @@ export default function RelatedGraph() {
         <circle cx={CENTER.x} cy={CENTER.y} r={74} fill="var(--color-ink)" data-center />
         <text
           x={CENTER.x}
-          y={CENTER.y - 6}
+          y={CENTER.y + 7}
           textAnchor="middle"
           className="fill-[var(--color-paper)] font-[Space_Grotesk] text-[24px] font-semibold"
         >
           alerta
-        </text>
-        <text
-          x={CENTER.x}
-          y={CENTER.y + 22}
-          textAnchor="middle"
-          className="fill-[var(--color-iflima)] font-[IBM_Plex_Mono] text-[13px] uppercase tracking-[0.16em]"
-        >
-          {ALERT_SAMPLE.id}
         </text>
       </g>
     </svg>

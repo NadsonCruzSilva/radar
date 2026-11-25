@@ -3,17 +3,17 @@ import type { CSSProperties } from 'react'
 const CARDS = [
   {
     title: 'Dados incompletos',
-    detail: 'Uma descrição genérica pode dificultar entender quais serviços foram pagos.',
+    detail: 'Descrições genéricas dificultam identificar o que foi pago.',
     accent: 'var(--color-iflima)',
   },
   {
     title: 'Contexto da despesa',
-    detail: 'Um reparo emergencial, por exemplo, pode explicar um valor acima do habitual.',
+    detail: 'Mudanças de volume, prazo ou escopo podem explicar valores atípicos.',
     accent: 'var(--color-ifvermelho)',
   },
   {
-    title: 'Análise humana',
-    detail: 'A pessoa responsável pela análise confere os dados e decide se vale buscar mais informações.',
+    title: 'Alcance da avaliação',
+    detail: 'O estudo de caso cobre uma unidade gestora e um exercício financeiro.',
     accent: 'var(--color-ifverde)',
   },
 ]
