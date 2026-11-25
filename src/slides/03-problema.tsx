@@ -6,9 +6,9 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 import { ResearchIcon } from '@/visuals/ResearchIcon'
 
 const SIGNALS = [
-  { icon: 'coleta' as const, label: 'Muitos dados públicos', detail: 'Os portais reúnem registros de diferentes despesas e órgãos.' },
-  { icon: 'historico' as const, label: 'Análise demorada', detail: 'É difícil conferir cada registro manualmente.' },
-  { icon: 'valor' as const, label: 'Diferenças escondidas', detail: 'Totais gerais podem ocultar despesas que se destacam.' },
+  { icon: 'coleta' as const, label: 'Dados abertos', detail: 'Os portais de transparência disponibilizam registros de execução orçamentária.' },
+  { icon: 'historico' as const, label: 'Triagem manual', detail: 'O volume de registros dificulta a análise individual.' },
+  { icon: 'valor' as const, label: 'Análise por categoria', detail: 'Totais agregados podem ocultar desvios em categorias específicas.' },
 ]
 
 export function SlideProblem() {
@@ -35,12 +35,12 @@ export function SlideProblem() {
         title="Pergunta de pesquisa"
       />
 
-      <div className="mt-14 grid grid-cols-[1.35fr_1fr] gap-20">
+      <div className="mt-14 grid flex-1 grid-cols-[1.35fr_1fr] gap-20">
         <div className="flex flex-col">
           <div className="relative border-l-4 border-[var(--color-ifverde)] pl-8" data-quote>
             <p className="title-lg text-[40px] leading-[1.2]">
-              Como ajudar cidadãos e analistas a localizar despesas públicas que merecem ser conferidas
-              e mostrar por que elas chamaram atenção?
+              Como identificar, priorizar e explicar despesas públicas atípicas a partir de dados abertos,
+              de modo que cidadãos e analistas possam conferir as evidências de cada alerta?
             </p>
             <span className="mono-label mt-6 block text-[var(--color-ink-muted)]">
               questão de pesquisa
@@ -59,14 +59,6 @@ export function SlideProblem() {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="mt-12 max-w-[1100px] border-t border-[var(--color-border)] pt-6">
-        <p className="title-lg text-[26px]">O que o total do mês pode esconder?</p>
-        <p className="body-sm mt-3 text-[var(--color-ink-muted)]">
-          Uma despesa com manutenção predial pode passar despercebida no total do órgão.
-          A diferença fica visível quando comparamos esse valor com outras despesas de manutenção.
-        </p>
       </div>
 
       <Footnote source="Anteprojeto, Introdução. Lei de Acesso à Informação (2011) e Dutra et al. (2026)." />

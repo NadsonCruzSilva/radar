@@ -38,15 +38,15 @@ export function SlidePipeline() {
       <SlideHeader
         index="06"
         section="funcionamento proposto"
-        title="Da informação ao alerta"
-        lead="O Radar organiza os registros em uma sequência simples: encontra diferenças, explica os sinais e facilita a conferência."
+        title="Fluxo de análise"
+        lead="A fonte preferencial é o SIGEFES, com a API do Portal da Transparência federal como alternativa. A base tratada será armazenada para reproduzir a análise."
       />
 
       <div className="mt-8 flex flex-1 flex-col justify-center">
         <PipelineFlow />
       </div>
 
-      <Footnote source="Anteprojeto, Metodologia">Visão simplificada da experiência proposta.</Footnote>
+      <Footnote source="Anteprojeto, Metodologia">Figura 1. Etapas do fluxo de análise.</Footnote>
     </Slide>
   )
 }

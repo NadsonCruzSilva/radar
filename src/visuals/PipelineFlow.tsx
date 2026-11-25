@@ -2,15 +2,17 @@ import type { CSSProperties } from 'react'
 import { ResearchIcon } from './ResearchIcon'
 
 const STEPS = [
-  { key: 'coleta', label: 'Dados públicos', detail: 'O Radar parte dos registros de despesas do órgão e do período escolhidos.' },
-  { key: 'valor', label: 'Comparação', detail: 'O Radar procura diferenças entre despesas semelhantes, como as da mesma categoria.' },
-  { key: 'historico', label: 'Alerta explicado', detail: 'Uma ficha mostra qual despesa se destacou e qual comparação chamou atenção.' },
-  { key: 'exploracao', label: 'Conferência', detail: 'O usuário consulta a fonte oficial para verificar o registro e interpretar a diferença.' },
+  { key: 'coleta', label: 'Coleta', detail: 'fonte pública' },
+  { key: 'tratamento', label: 'Tratamento', detail: 'duplicidades, ausências e identificadores pessoais' },
+  { key: 'atributos', label: 'Atributos', detail: 'valor, frequência e favorecido' },
+  { key: 'deteccao', label: 'Detecção e prioridade', detail: 'Isolation Forest e valor da despesa' },
+  { key: 'contexto', label: 'Explicação', detail: 'regras baseadas nos dados' },
+  { key: 'exploracao', label: 'Painel', detail: 'ranking, filtros e fichas' },
 ] as const
 
 export default function PipelineFlow() {
   return (
-    <div className="grid w-full grid-cols-4 gap-5" data-flow>
+    <div className="grid w-full grid-cols-6 gap-4" data-flow>
       {STEPS.map((step, i) => (
         <div key={step.key} className="relative flex flex-col" data-step>
           <div className="flex items-center gap-3">
@@ -30,15 +32,24 @@ export default function PipelineFlow() {
           </div>
           <div
             data-card
-            className="panel mt-4 flex flex-1 flex-col px-7 py-7"
+            className="panel mt-4 flex flex-1 flex-col px-4 py-5"
             style={{ '--accent': 'var(--color-ifverde)' } as CSSProperties}
           >
             <span className="panel-line" aria-hidden="true" />
             <ResearchIcon name={step.key} className="mb-4 h-11 w-11 text-[var(--slide-accent)]" />
             <p className="panel-text-accent title-lg text-[24px] leading-tight">{step.label}</p>
-            <p className="body-sm mt-4 text-[var(--color-ink-muted)]">
+            <p className="mono-label mt-3 text-[11px] text-[var(--color-ink-muted)]">
               {step.detail}
             </p>
+            <span className="mt-auto flex items-center gap-1.5 pt-5" aria-hidden="true">
+              {STEPS.map((_, dot) => (
+                <span
+                  key={dot}
+                  className="h-1 w-1 rounded-full"
+                  style={{ background: dot <= i ? 'var(--color-ifverde)' : 'var(--color-border)' }}
+                />
+              ))}
+            </span>
           </div>
         </div>
       ))}

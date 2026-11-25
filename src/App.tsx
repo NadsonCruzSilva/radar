@@ -8,6 +8,8 @@ import { SlideProblem } from './slides/03-problema'
 import { SlideScope } from './slides/04-delimitacao'
 import { SlidePart2 } from './slides/05-parte-2'
 import { SlidePipeline } from './slides/06-pipeline'
+import { SlideFeatures } from './slides/07-atributos'
+import { SlideDetection } from './slides/08-deteccao'
 import { SlideExplanation } from './slides/09-explicacao'
 import { SlideContext } from './slides/10-contexto'
 import { SlideDashboard } from './slides/11-interface'
@@ -24,6 +26,8 @@ const SLIDES: { id: string; render: () => ReactElement }[] = [
   { id: 'delimitacao', render: () => <SlideScope /> },
   { id: 'parte-2', render: () => <SlidePart2 /> },
   { id: 'pipeline', render: () => <SlidePipeline /> },
+  { id: 'atributos', render: () => <SlideFeatures /> },
+  { id: 'deteccao', render: () => <SlideDetection /> },
   { id: 'explicacao', render: () => <SlideExplanation /> },
   { id: 'contexto', render: () => <SlideContext /> },
   { id: 'interface', render: () => <SlideDashboard /> },

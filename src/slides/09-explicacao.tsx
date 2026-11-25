@@ -21,29 +21,29 @@ export function SlideExplanation() {
       <div className="grid h-full grid-cols-[520px_1fr] gap-14">
         <div className="flex flex-col justify-center">
           <SlideHeader
-            index="07"
-            section="o alerta"
-            title="O que aparece em um alerta?"
-            lead="A ficha resume o que se destacou e oferece informações para que a pessoa possa conferir o registro."
+            index="09"
+            section="explicação do alerta"
+            title="Explicação do alerta"
+            lead="Cada ficha descreve os atributos que ajudam a interpretar o alerta e indica o que conferir na base de origem."
           />
 
           <ul className="mt-14 space-y-5">
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">Por que apareceu?</p>
+              <p className="title-lg text-[22px]">redação opcional</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                Neste exemplo, o valor pago pela manutenção ficou em cerca de sete vezes a mediana da categoria.
+                Um modelo de linguagem poderá ser testado para redigir o texto com base nas evidências fornecidas.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">O que conferir?</p>
+              <p className="title-lg text-[22px]">explicação por regras</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                Valor, favorecido, período e outras informações disponíveis na fonte.
+                As regras geram uma explicação em português a partir dos atributos do registro.
               </p>
             </li>
             <li className="border-t border-[var(--color-border)] pt-4">
-              <p className="title-lg text-[22px]">Como interpretar?</p>
+              <p className="title-lg text-[22px]">evidências auditáveis</p>
               <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-                A diferença de valor é um motivo para conferir o contexto da despesa.
+                valores, período e referências que podem ser conferidos.
               </p>
             </li>
           </ul>

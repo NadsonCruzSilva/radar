@@ -10,7 +10,7 @@ export function SlidePart3() {
         index="3"
         kicker="como avaliar"
         title="Avaliação e viabilidade"
-        note="A proposta será analisada para entender se os alertas são claros, verificáveis e úteis como ponto de partida."
+        note="O estudo de caso examinará as evidências, a fidelidade das explicações e a utilidade dos alertas para a triagem."
       />
     </Slide>
   )

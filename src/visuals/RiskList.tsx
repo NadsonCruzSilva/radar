@@ -2,18 +2,18 @@ import type { CSSProperties } from 'react'
 
 const CARDS = [
   {
-    title: 'Dados incompletos',
-    detail: 'Uma descrição genérica pode dificultar entender quais serviços foram pagos.',
+    title: 'Qualidade da base',
+    detail: 'A preparação trata duplicidades, valores ausentes e eventuais identificadores pessoais.',
     accent: 'var(--color-iflima)',
   },
   {
-    title: 'Contexto da despesa',
-    detail: 'Um reparo emergencial, por exemplo, pode explicar um valor acima do habitual.',
+    title: 'Interpretação dos alertas',
+    detail: 'Despesas atípicas entram na fila de triagem. A apuração de irregularidades exige análise humana.',
     accent: 'var(--color-ifvermelho)',
   },
   {
-    title: 'Análise humana',
-    detail: 'A pessoa responsável pela análise confere os dados e decide se vale buscar mais informações.',
+    title: 'Viabilidade técnica',
+    detail: 'O protótipo usará bibliotecas gratuitas e poderá ser executado em um computador convencional.',
     accent: 'var(--color-ifverde)',
   },
 ]

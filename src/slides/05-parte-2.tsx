@@ -8,9 +8,9 @@ export function SlidePart2() {
       tone="green">
       <SectionDivider
         index="2"
-        kicker="a ideia"
-        title="Como o Radar ajudaria"
-        note="Uma ferramenta de apoio que mostra o que chamou atenção, por que isso aconteceu e onde conferir os dados."
+        kicker="como funciona"
+        title="Método proposto"
+        note="A pesquisa segue a Design Science Research para desenvolver, demonstrar e avaliar o protótipo."
       />
     </Slide>
   )

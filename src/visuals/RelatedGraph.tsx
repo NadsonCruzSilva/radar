@@ -12,7 +12,7 @@ const RADIUS = 220
 
 const RELATIONS: Related[] = [
   { label: 'Fonte oficial', detail: 'registro de origem', angle: -90, color: 'var(--color-ifverde)' },
-  { label: 'Comparação', detail: 'despesas semelhantes', angle: 30, color: 'var(--color-iflima)' },
+  { label: 'Elemento', detail: 'grupo comparável', angle: 30, color: 'var(--color-iflima)' },
   { label: 'Valor', detail: 'despesa registrada', angle: 150, color: 'var(--color-ifvermelho)' },
 ]
 
