@@ -43,22 +43,19 @@ export function SlideDashboard() {
       <div className="grid h-full grid-cols-[520px_1fr] gap-12">
         <div className="flex flex-col justify-center">
           <SlideHeader
-            index="11"
-            section="interface"
-            title="Painel de análise"
-            lead="O painel em Streamlit reunirá o ranking de alertas, filtros e fichas com justificativas verificáveis."
+            index="09"
+            section="exploração"
+            title="Como o usuário exploraria o Radar"
+            lead="Um painel reúne os alertas, filtros e informações para ajudar o usuário a entender cada caso."
           />
 
-          <div className="mt-14 space-y-4">
-            <p className="body-sm text-[var(--color-ink-muted)]">
-              Filtros por órgão, período, categoria, favorecido e valor.
-            </p>
-            <p className="body-sm text-[var(--color-ink-muted)]">
-              A ordem dos alertas combina atipicidade e valor da despesa.
-            </p>
-            <p className="body-sm text-[var(--color-ink-muted)]">
-              Cada ficha vincula a justificativa aos dados do registro.
-            </p>
+          <div className="mt-10 border-t border-[var(--color-border)] pt-5">
+            <p className="title-lg text-[24px]">Exemplo de uso</p>
+            <ol className="body-sm mt-4 list-decimal space-y-3 pl-7 text-[var(--color-ink-muted)]">
+              <li>Filtrar pela categoria de manutenção predial.</li>
+              <li>Selecionar uma despesa na lista priorizada.</li>
+              <li>Abrir a ficha para entender o destaque e localizar a fonte oficial.</li>
+            </ol>
           </div>
         </div>
 

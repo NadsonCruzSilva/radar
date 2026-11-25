@@ -7,9 +7,7 @@ import EvaluationGrid from '@/visuals/EvaluationGrid'
 export function SlideEvaluation() {
   const build = useCallback((root: HTMLElement) => {
     const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
-    tl.from(root.querySelector('[data-sample="ranking"]'), { opacity: 0, duration: 0.35 })
-      .from(root.querySelector('[data-sample="controle"]'), { opacity: 0, duration: 0.35 }, '+=0.1')
-      .from(root.querySelectorAll('[data-criterion]'), { opacity: 0, duration: 0.3, stagger: 0.12 }, '+=0.1')
+    tl.from(root.querySelectorAll('[data-criterion]'), { opacity: 0, duration: 0.3, stagger: 0.12 })
     return tl
   }, [])
 
@@ -19,10 +17,10 @@ export function SlideEvaluation() {
       tone="paper"
       animate={build}>
       <SlideHeader
-        index="13"
+        index="10"
         section="avaliação"
-        title="Protocolo de avaliação"
-        lead="O estudo de caso documental examinará 40 registros de um mesmo exercício: os 30 primeiros do ranking e 10 sorteados fora desse grupo."
+        title="Como a proposta será avaliada"
+        lead="Um estudo de caso vai examinar alertas e registros selecionados para verificar se as informações ajudam a orientar a conferência."
       />
 
       <div className="mt-8 flex flex-1 items-start">

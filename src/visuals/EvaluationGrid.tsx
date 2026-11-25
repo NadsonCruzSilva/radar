@@ -1,58 +1,36 @@
 const CRITERIA = [
   {
     key: 'evidencia',
-    title: 'Verificabilidade',
-    detail: 'Conferência das evidências na fonte oficial.',
+    title: 'É possível conferir?',
+    detail: 'As informações do alerta podem ser verificadas na fonte?',
   },
   {
     key: 'fidelidade',
-    title: 'Fidelidade explicativa',
-    detail: 'A explicação é sustentada pelos dados do registro.',
+    title: 'A explicação faz sentido?',
+    detail: 'O motivo apresentado corresponde ao que aparece no registro?',
   },
   {
     key: 'acionabilidade',
-    title: 'Utilidade para a triagem',
-    detail: 'O alerta oferece elementos para orientar a análise preliminar.',
+    title: 'Ajuda a começar a análise?',
+    detail: 'O alerta mostra por onde o usuário pode iniciar a conferência?',
   },
   {
     key: 'ruido',
-    title: 'Ruído benigno',
-    detail: 'Proporção dos alertas prioritários explicados por rotinas administrativas legítimas.',
+    title: 'Há explicações legítimas?',
+    detail: 'Algumas diferenças podem decorrer de rotinas administrativas normais.',
   },
 ]
 
-/**
- * Protocolo de avaliação por estudo de caso (metodologia.tex): 40 registros,
- * 30 do topo do ranking e 10 de controle, analisados sob quatro critérios.
- */
 export default function EvaluationGrid() {
   return (
     <div className="grid w-full grid-cols-[1fr_460px] gap-20" data-anim>
-      <div>
-        <div className="flex items-end justify-between">
-          <p className="mono-label text-[16px] text-[var(--color-ink-muted)]">amostra intencional</p>
-          <p className="mono-label text-[16px] text-[var(--color-ink-muted)]">40 registros</p>
-        </div>
-        <div className="mt-4 grid gap-1.5">
-          {[
-            { key: 'ranking', count: 30, className: 'bg-[var(--color-ifverde)]' },
-            { key: 'controle', count: 10, className: 'border border-[var(--color-border)] bg-[var(--color-surface)]' },
-          ].map(({ key, count, className }) => (
-            <div key={key} data-sample={key} className="grid grid-cols-10 gap-1.5" aria-hidden="true">
-              {Array.from({ length: count }, (_, i) => (
-                <span key={i} className={`aspect-square ${className}`} />
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className="mt-5 flex items-center gap-8">
-          <span className="mono-label flex items-center gap-3 text-[16px] text-[var(--color-ink-muted)]">
-            <span className="h-3 w-3 bg-[var(--color-ifverde)]" /> 30 alertas do topo
-          </span>
-          <span className="mono-label flex items-center gap-3 text-[16px] text-[var(--color-ink-muted)]">
-            <span className="h-3 w-3 border border-[var(--color-border)] bg-[var(--color-surface)]" /> 10 de controle
-          </span>
-        </div>
+      <div className="flex flex-col justify-center border-l-4 border-[var(--color-ifverde)] pl-8">
+        <p className="title-lg text-[34px] leading-tight">O que será examinado?</p>
+        <ul className="body-sm mt-5 max-w-[740px] list-disc space-y-3 pl-7 text-[var(--color-ink-muted)]">
+          <li>Alertas no topo da lista de prioridades.</li>
+          <li>Despesas selecionadas fora desse grupo.</li>
+          <li>Informações que podem ser confirmadas no registro oficial.</li>
+        </ul>
       </div>
 
       <ol className="space-y-6">

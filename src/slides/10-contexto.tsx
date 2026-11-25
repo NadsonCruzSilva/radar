@@ -5,6 +5,12 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 import { ALERT_SAMPLE } from '@/visuals/alert-sample'
 import RelatedGraph from '@/visuals/RelatedGraph'
 
+const CHECK_STEPS = [
+  'Encontre o registro da unidade e do período indicados na ficha.',
+  'Confirme o valor e a categoria da despesa na fonte oficial.',
+  'Compare com outras despesas de manutenção predial no recorte.',
+]
+
 export function SlideContext() {
   const build = useCallback((root: HTMLElement) => {
     const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
@@ -20,10 +26,10 @@ export function SlideContext() {
       tone="paper"
       animate={build}>
       <SlideHeader
-        index="10"
-        section="contextualização"
-        title="Como conferir uma evidência"
-        lead="Cada alerta remete ao registro de origem e aos atributos usados para interpretar a despesa."
+        index="08"
+        section="conferência"
+        title="Como conferir um alerta"
+        lead="O usuário pode voltar à fonte, localizar a despesa e verificar a comparação apresentada."
       />
 
       <div className="mt-6 grid flex-1 grid-cols-[1fr_560px] items-center gap-16">
@@ -35,16 +41,14 @@ export function SlideContext() {
           <div className="border-t border-[var(--color-border)] pt-5">
             <p className="mono-label text-[11px] text-[var(--color-ink-muted)]">caso ilustrativo</p>
             <p className="title-lg mt-2 text-[30px]">{ALERT_SAMPLE.id}</p>
-            <p className="body-sm mt-2 text-[var(--color-ink-muted)]">
-              Despesa de {ALERT_SAMPLE.valor}. A mediana do mesmo elemento de despesa é de {ALERT_SAMPLE.mediana}.
-            </p>
+            <p className="body-sm mt-2 text-[var(--color-ink-muted)]">{ALERT_SAMPLE.categoria} · {ALERT_SAMPLE.periodo}</p>
           </div>
 
           <div className="border-t border-[var(--color-border)] pt-5">
             <p className="title-lg text-[22px]">Conferência na base oficial</p>
-            <p className="body-sm mt-1 text-[var(--color-ink-muted)]">
-              Localizar o registro, confirmar o valor e refazer a comparação com os registros do mesmo elemento.
-            </p>
+            <ol className="body-sm mt-3 list-decimal space-y-2 pl-7 text-[var(--color-ink-muted)]">
+              {CHECK_STEPS.map((step) => <li key={step}>{step}</li>)}
+            </ol>
           </div>
         </aside>
       </div>

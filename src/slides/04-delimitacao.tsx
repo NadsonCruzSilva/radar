@@ -6,14 +6,14 @@ import { SlideHeader, Footnote } from '@/deck/chrome'
 const SCOPE = [
   'Um exercício financeiro encerrado',
   'Uma unidade gestora estadual ou federal',
-  'Despesas públicas disponíveis em dados abertos',
+  'Registros de despesas publicados em dados abertos',
+  'A fonte preferencial é o SIGEFES, com o Portal da Transparência federal como alternativa.',
 ]
 
 const OBJECTIVES = [
-  'Preparar os dados e calcular atributos de valor, frequência e favorecido',
-  'Detectar despesas atípicas e ordenar os alertas por prioridade',
-  'Exibir alertas e evidências verificáveis em um painel interativo',
-  'Avaliar os alertas e as explicações em um estudo de caso documental',
+  'Organizar os registros em alertas fáceis de explorar',
+  'Mostrar por que cada despesa chamou atenção',
+  'Avaliar se os alertas ajudam a orientar a conferência',
 ]
 
 export function SlideScope() {
@@ -50,10 +50,11 @@ export function SlideScope() {
       <SlideHeader
         index="04"
         section="delimitação"
-        title="Objetivos e recorte"
+        title="O que o projeto pretende fazer"
+        lead="O recorte de uma unidade gestora e um ano de dados torna viável a conferência dos registros."
       />
 
-      <div className="mt-12 grid flex-1 grid-cols-2 gap-6">
+      <div className="my-10 grid grid-cols-2 gap-6">
         <div
           className="panel flex flex-col px-10 py-8"
           data-col-scope
@@ -77,7 +78,7 @@ export function SlideScope() {
           style={{ '--accent': 'var(--color-ifvermelho)' } as CSSProperties}
         >
           <span className="panel-line" aria-hidden="true" />
-          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Objetivos específicos</h3>
+          <h3 className="panel-text-accent title-lg text-[30px]" data-badge>Objetivo da proposta</h3>
           <ul className="mt-8 space-y-4">
             {OBJECTIVES.map((item) => (
               <li key={item} className="flex items-baseline gap-4 border-t border-[var(--color-border)]/60 pt-4" data-item-objective>
